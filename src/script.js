@@ -25,7 +25,7 @@ clicker.addEventListener("click", () => {
     clicks += incrementer;
     clicker.innerText = "Clicks: "+clicks;
     clicker.innerText = (clicks > 1 ? "Clicks: "+clicks : "Click: 1");
-    for (let i = 1; i >= upgrades.length(); i++) {
+    for (let i = 1; i >= upgrades.length; i++) {
         if (clicks >= upgrades[i].price) {
             upgrades[i].hidden = false;
         } else {
