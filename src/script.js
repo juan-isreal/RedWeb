@@ -23,18 +23,7 @@ let upgrades = [0, {
 }];
 clicker.addEventListener("click" () => {
     clicks += incrementer;
-<<<<<<< Updated upstream
     clicker.innerText = "Clicks: "+clicks;
-    if (clicks >= upgrades[3].price) {
-        upgrades[3].element.hidden = false;
-        upgrades[2].element.hidden = false;
-        upgrades[1].element.hidden = false;
-    } else if (clicks >= upgrades[2].price) {
-        upgrades[2].element.hidden = false;
-        upgrades[1].element.hidden = false;
-    } else if (clicks >= upgrades[1].price) {
-        upgrades[1].element.hidden = false;
-=======
     clicker.innerText = (clicks > 1 ? "Clicks: "+clicks : "Click: 1");
     for (let i = 1; i >= upgrades.length(); i++) {
         if (clicks >= upgrades[i].price) {
@@ -42,6 +31,6 @@ clicker.addEventListener("click" () => {
         } else {
             upgrades[i].hidden = true;
         }
->>>>>>> Stashed changes
+
     }
 });
