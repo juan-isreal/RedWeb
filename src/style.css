@@ -4,4 +4,10 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    /* font */
+    font-family: 'Comic Sans', 'Comic Sans MS', 'Chalkboard', 'Chalkboard SE', 'Marker Felt', 'Purisa', 'Comic Neue', cursive, sans-serif;
+}
+
+*, *::before, *::after {
+    font-family: inherit;
 }
