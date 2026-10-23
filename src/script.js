@@ -23,15 +23,12 @@ let upgrades = [0, {
 }];
 clicker.addEventListener("click", () => {
     clicks += incrementer;
+    clicker.innerText = "Clicks: "+clicks;
     clicker.innerText = (clicks > 1 ? "Clicks: "+clicks : "Click: 1");
-    if (clicks >= upgrades[3].price) {
-        upgrades[3].element.hidden = false;
-        upgrades[2].element.hidden = false;
-        upgrades[1].element.hidden = false;
-    } else if (clicks >= upgrades[2].price) {
-        upgrades[2].element.hidden = false;
-        upgrades[1].element.hidden = false;
-    } else if (clicks >= upgrades[1].price) {
-        upgrades[1].element.hidden = false;
-    }
+    for (let i = 1; i >= upgrades.length(); i++) {
+        if (clicks >= upgrades[i].price) {
+            upgrades[i].hidden = false;
+        } else {
+            upgrades[i].hidden = true;
+        }
 });
