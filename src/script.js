@@ -31,4 +31,5 @@ clicker.addEventListener("click", () => {
         } else {
             upgrades[i].hidden = true;
         }
+    }
 });
